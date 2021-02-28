@@ -1,0 +1,26 @@
+
+main.o:     file format elf64-x86-64
+
+Contents of section .text:
+ 0000 4883ec08 be020000 00bf0000 0000e800  H...............
+ 0010 00000048 83c408c3                    ...H....        
+Contents of section .data:
+ 0000 01000000 02000000                    ........        
+Contents of section .comment:
+ 0000 00474343 3a202847 4e552920 382e332e  .GCC: (GNU) 8.3.
+ 0010 31203230 31393131 32312028 52656420  1 20191121 (Red 
+ 0020 48617420 382e332e 312d3529 00        Hat 8.3.1-5).   
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 01781001  .........zR..x..
+ 0010 1b0c0708 90010000 14000000 1c000000  ................
+ 0020 00000000 18000000 00440e10 530e0800  .........D..S...
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	48 83 ec 08          	sub    $0x8,%rsp
+   4:	be 02 00 00 00       	mov    $0x2,%esi
+   9:	bf 00 00 00 00       	mov    $0x0,%edi
+   e:	e8 00 00 00 00       	callq  13 <main+0x13>
+  13:	48 83 c4 08          	add    $0x8,%rsp
+  17:	c3                   	retq   
